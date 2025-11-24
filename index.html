@@ -6,6 +6,7 @@
     <title>My Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Preahvihear&display=swap" rel="stylesheet">
     <style>
+        /* Your existing CSS remains the same */
         * {
             margin: 0;
             padding: 0;
@@ -129,17 +130,6 @@
             height: 100%;
             object-fit: cover;
             border-radius: 50%;
-        }
-
-        .profile-placeholder {
-            text-align: center;
-            color: #b36bff;
-            font-size: 16px;
-        }
-
-        .profile-placeholder .icon {
-            font-size: 64px;
-            margin-bottom: 15px;
         }
 
         /* Tagline */
@@ -412,7 +402,6 @@
                 font-size: 28px !important;
             }
             
-            /* Fix mobile menu positioning */
             .nav-links.active {
                 position: fixed;
                 top: 0;
@@ -434,7 +423,6 @@
                 padding: 15px 0;
             }
             
-            /* Close button for mobile menu */
             .close-menu {
                 position: absolute;
                 top: 30px;
@@ -467,7 +455,6 @@
             }
         }
         
-        /* Prevent body scroll when menu is open */
         body.no-scroll {
             overflow: hidden;
         }
@@ -516,14 +503,9 @@
     <div class="about-content">
         <div class="about-text">
             <p>I'm a minimalist logo designer inspired by video game aesthetics. Using Figma, Canva, and Ibis Paint X, I create clean, impactful designs that tell stories through simplicity. My goal is to make cool minimalist marks that resonate and endure.</p>
-            <a href="vid/584411174_25204805552514599_6388632727700702795_n.mp4" 
-   class="video-button" 
-   target="_blank">
-   Watch My Introduction Video here
-</a>
-        </div>
-        <div class="about-image">
-            <!-- Optional about section image -->
+            <a href="vid/584411174_25204805552514599_6388632727700702795_n.mp4" class="video-button" target="_blank">
+                Watch My Introduction Video here
+            </a>
         </div>
     </div>
 </section>
@@ -533,32 +515,32 @@
     <h2 class="section-title">Projects:</h2>
     <div class="projects-grid">
         <div class="project-card">
-            <img src="pics/Pr1.jpg" alt="Logo Proj" class="project-img">
+            <img src="pics/Pr1.jpg" alt="Plum Blossom Logo" class="project-img">
             <h4>Plum Blossom Logo Project</h4>
             <p>Click to View</p>
         </div>
         <div class="project-card">
-            <img src="pics/Ad.png" alt="Ad Banner" class="project-img">
+            <img src="pics/Ad.png" alt="Pumpkin Spice Ad Banner" class="project-img">
             <h4>Pumpkin Spice Ad Banner</h4>
             <p>Click to View</p>
         </div>
         <div class="project-card">
-            <img src="pics/Banner.png" alt="Banner" class="project-img">
+            <img src="pics/Banner.png" alt="Pumpkin Spice Banner" class="project-img">
             <h4>Pumpkin Spice Banner</h4>
             <p>Click to View</p>
         </div>
         <div class="project-card">
-            <img src="pics/post.png" alt="Post" class="project-img">
+            <img src="pics/post.png" alt="Social Media Post" class="project-img">
             <h4>Pumpkin Spice Social Media Post</h4>
             <p>Click to View</p>
         </div>
         <div class="project-card">
-            <img src="pics/Web.png" alt="web" class="project-img">
+            <img src="pics/Web.png" alt="Website Homepage" class="project-img">
             <h4>Pumpkin Spice Website Homepage</h4>
             <p>Click to View</p>
         </div>
         <div class="project-card">
-            <img src="pics/Logo.png" alt="logo" class="project-img">
+            <img src="pics/Logo.png" alt="Logo Icon" class="project-img">
             <h4>Plum Blossom Logo Icon Example</h4>
             <p>Click to View</p>
         </div>
@@ -611,6 +593,11 @@
     </div>
 </section>
 
+<!-- Footer -->
+<footer class="footer container">
+    <p>&copy; 2023 Andrei Celada. All rights reserved.</p>
+</footer>
+
 <script>
 // Mobile menu toggle
 const menuToggle = document.querySelector('.menu-toggle');
@@ -633,7 +620,6 @@ function closeMobileMenu() {
 menuToggle.addEventListener('click', openMenu);
 closeMenu.addEventListener('click', closeMobileMenu);
 
-// Close menu when clicking on a link
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', closeMobileMenu);
 });
@@ -659,8 +645,8 @@ document.addEventListener('click', (e) => {
     }
 });
 
-// Lightbox functionality - FIXED
-const projectImages = document.querySelectorAll('.project-card img'); // Fixed selector
+// Lightbox functionality
+const projectImages = document.querySelectorAll('.project-card img');
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
 const lightboxClose = document.querySelector('.lightbox-close');
